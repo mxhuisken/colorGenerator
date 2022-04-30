@@ -1,0 +1,25 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+body{
+    background-image: url(./images/coding.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color:white;
+    padding: 25px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+};
