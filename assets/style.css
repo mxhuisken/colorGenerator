@@ -22,4 +22,17 @@ header{
 .container{
     display: flex;
     justify-content: center;
-};
+}
+
+.color-boxes {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.colorBoxes {
+    flex: 0 0 100px;
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
