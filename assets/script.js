@@ -6,7 +6,8 @@ function addColorBlock(color) {
 
 var inputEl = document.querySelector("#input");
 
-var AllowedInputs = ["aliceblue",
+var AllowedInputs = [
+"aliceblue",
 "antiquewhite",
 "aqua",
 "aquamarine",
@@ -158,6 +159,17 @@ var AllowedInputs = ["aliceblue",
 var fetchbutton = document.querySelector("#submit");
 fetchbutton.addEventListener("click", (e) => {
   //validate input before hitting API
+  fetchColors()
+});
+
+inputEl.addEventListener("keyup", (e) => {
+  //validate input before hitting API
+  if (e.key === "Enter"){
+  fetchColors()
+  }
+});
+
+function fetchColors() {
   if (inputEl.value && AllowedInputs .includes(inputEl.value)) {
     var requestUrl = `https://colorizerifier.netlify.app/.netlify/functions/shades?color=${inputEl.value}`;
     fetch(requestUrl)
@@ -170,4 +182,4 @@ fetchbutton.addEventListener("click", (e) => {
         }
       });
   }
-});
+}
