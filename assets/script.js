@@ -1,11 +1,9 @@
-function addColorBlock(color) {
+function addColorBlock(color, i) {
   $(".color-boxes").append(
-    `<div class="colorBoxes" style="background-color:${color}"></div>`
-  );
-}
+    `<div data-color="${color}" class="colorBoxes" id="color-${i}" style="background-color:${color}"><span class="caption">${color}</span></div>`)
+  }
 
 var inputEl = document.querySelector("#input");
-
 var AllowedInputs = [
 "aliceblue",
 "antiquewhite",
@@ -156,6 +154,7 @@ var AllowedInputs = [
 "yellow",
 "yellowgreen"];
 
+
 var fetchbutton = document.querySelector("#submit");
 fetchbutton.addEventListener("click", (e) => {
   //validate input before hitting API
@@ -178,7 +177,18 @@ function fetchColors() {
         console.log(colorData);
         $(".color-boxes").empty();
         for (i = 0; i < colorData.length; i++) {
-          addColorBlock(colorData[i]);
+          addColorBlock(colorData[i], i);
+          document.querySelector(`#color-${i}`).addEventListener('click', function (e) {
+            console.log(e.currentTarget)
+            console.log(e.currentTarget.getAttribute('data-color'))
+            var c = document.createElement('textarea')
+            c.style.display = 'hidden'
+            document.body.appendChild(c)
+            c.value = e.currentTarget.getAttribute('data-color')
+            c.select()
+            document.execCommand('copy')
+            document.body.removeChild(c)
+          })
         }
       });
   }
