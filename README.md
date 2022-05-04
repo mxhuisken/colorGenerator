@@ -6,7 +6,7 @@
 
 # Site Preview 
 
-<img src="./assets/images/coding.jpeg">
+<img src="./assets/images/sitePreview.png">
 
 # Github Links 
 
