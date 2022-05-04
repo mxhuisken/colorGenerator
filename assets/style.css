@@ -2,11 +2,33 @@
     font-family: 'Courier New', Courier, monospace;
 
 }
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
 
-body{
-    background-image: url(./images/coding.jpeg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+
+body {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
 }
 
 header{
@@ -22,11 +44,15 @@ header{
 .container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .color-boxes {
+    max-width: 800px;
     flex-wrap: wrap;
     display: flex;
+    margin:auto;
+    padding-top: 100px;
 }
 
 .colorBoxes {
@@ -35,4 +61,23 @@ header{
     height: 100px;
     margin: 30px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;}
+
+.colorBoxes:hover {
+    transition: 0.2s;
+    transform:scale(1.1)
+
+}
+.caption{
+    opacity: 0%;
+    color: black;
+    padding: 35px;
+}
+.caption:hover{
+    opacity: 100%;
+    transition: 0.2s;
 }
