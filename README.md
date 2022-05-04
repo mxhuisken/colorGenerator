@@ -6,6 +6,8 @@
 
 # Site Preview 
 
+<img src="./assets/images/coding.jpeg">
+
 # Github Links 
 
 - Repository: https://github.com/mxhuisken/colorGenerator
@@ -20,5 +22,3 @@
 - Does not use alerts, confirms, or prompts (use modals).
 - Use client-side storage to store persistent data IF APPLICABLE.
 - Responsive site & polished UI
-
-# Notes & Resources
