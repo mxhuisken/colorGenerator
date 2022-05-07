@@ -158,9 +158,6 @@ var AllowedInputs = [
   "yellowgreen",
 ];
 
-
-
-
 var fetchbutton = document.querySelector("#submit");
 fetchbutton.addEventListener("click", (e) => {
   //validate input before hitting API
