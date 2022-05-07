@@ -193,3 +193,4 @@ function fetchColors() {
       });
   }
 }
+$("#input").autocomplete({source:AllowedInputs})
